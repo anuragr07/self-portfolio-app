@@ -2,9 +2,8 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss"
+import Logo from "../Logo/Logo";
 
 export default function Home() {
 
@@ -33,20 +32,17 @@ export default function Home() {
     }
 
     return(
-        <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light" className="p-0 nav-height">
-            <Navbar.Brand>
-            <Nav>
-            <NavLink exact className="nav-link active" to="/">
-                <h1 className="logo">
-                    <FontAwesomeIcon icon={faCode} />
-                    ANURAGR07
-                </h1>    
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-0 nav-main">
+            <Navbar.Brand style={{ marginRight: "0px", paddingRight: "5px"}}>
+            <Nav className="d-flex alig-items-center justify-content-center">
+            <NavLink exact className="nav-link active nav-brand" to="/">
+                <Logo></Logo>
             </NavLink>
             </Nav>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="justify-content-end" style={{ width: "100%", marginRight: "100px" }}>
+                <Nav className="justify-content-end" style={{ width: "100%", paddingRight: "100px"}}>
 
                     {getLinks()}
                     {/* {getLoginLogoutLink()} */}

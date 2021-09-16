@@ -10,21 +10,25 @@
 }
 
 :root{
-    --primary: #022b3a;
-    --info: #BFDBF7;
-    --light: #E1E5F2;
-    --secondary: #1F7A8C;
+    --primary: #960200;
+    --info: #91D1CB;
+    --light: #FCFAF9;
+    --secondary: #D52941;
+    --dark: #1C1C1C;
 }
 
 $theme-colors: (
-    "primary": #022b3a,
-    "secondary": #1F7A8C,
-    "light": #E1E5F2,
-    "info": #BFDBF7
-    // "transparent": rgba(0, 0, 0, 0)
+    "primary": #960200,
+    "secondary": #D52941,
+    "light": #FCFAF9,
+    "info": #91D1CB,
+    "dark": #1C1C1C,
+    "transparent": rgba(0, 0, 0, 0)
 );
 
-
 // Import all bootstrap variables
-@import "../node_modules/bootstrap/scss/bootstrap.scss"
+@import "~bootstrap/scss/bootstrap.scss"
+
+
+
 
