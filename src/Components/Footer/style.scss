@@ -1,6 +1,8 @@
 .my-footer{
-    color: var(--light);
+    color: var(--info);
     background-color: var(--dark);
+    
+
 }
 
 .footer-bottom{
@@ -9,5 +11,33 @@
     box-sizing: border-box;
 }
 
+.footer-links{
+    text-align: left;
+}
+
+.footer-links h5{
+    padding: 10px;
+    text-decoration: underline;
+    padding-bottom: 0;
+}
+
+.footer-links ul{
+    padding: 10px;
+    padding-top: 0;
+}
+
+.footer-links li{
+    list-style: none;    
+}
+
+.footer-links li a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links li a:hover{
+    text-decoration: underline;
+    color: var(--info);
+}
 // Start with HR above 'Anurag Rawal 2021'
 // Complete footer today
