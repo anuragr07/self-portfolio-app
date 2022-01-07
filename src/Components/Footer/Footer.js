@@ -8,7 +8,7 @@ import Logo from '../Logo/Logo';
 export default function Footer(){
     return(
         <div className="my-footer">
-        <Container >
+        <Container>
             <Row xs={1} lg={4}>
                 <Col className="d-flex align-items-center justify-content-center">
                     <h3>
