@@ -26,8 +26,15 @@ $theme-colors: (
     "transparent": rgba(0, 0, 0, 0)
 );
 
+
+// Variables for media screen
+$small: 576px;
+$medium: 992px;
+$large: 1440px;
+
 // Import all bootstrap variables
-@import "~bootstrap/scss/bootstrap.scss"
+@import "~bootstrap/scss/bootstrap.scss";
+
 
 
 

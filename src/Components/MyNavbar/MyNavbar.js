@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import "./style.scss"
+import "./MyNavbar.scss"
 import Logo from "../Logo/Logo";
 
 export default function Home() {

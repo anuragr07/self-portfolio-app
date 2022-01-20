@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import './style.scss';
+import './Footer.scss';
 
 // Fontawesome imports
 import Logo from '../Logo/Logo';
