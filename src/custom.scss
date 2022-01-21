@@ -1,41 +1,4 @@
-/* Custom fonts, colors, and variables */
-@font-face{
-    src: url(fonts/mariogalo/mariogalo.ttf);
-    font-family: logofont;  
-}
-
-@font-face{
-    src: url(fonts/ractor/RACTOR.ttf);
-    font-family: headfont;
-}
-
-:root{
-    --primary: #960200;
-    --info: #91D1CB;
-    --light: #FCFAF9;
-    --secondary: #D52941;
-    --dark: #1C1C1C;
-}
-
-$theme-colors: (
-    "primary": #960200,
-    "secondary": #D52941,
-    "light": #FCFAF9,
-    "info": #91D1CB,
-    "dark": #1C1C1C,
-    "transparent": rgba(0, 0, 0, 0)
-);
-
-
 // Variables for media screen
 $small: 576px;
 $medium: 992px;
 $large: 1440px;
-
-// Import all bootstrap variables
-@import "~bootstrap/scss/bootstrap.scss";
-
-
-
-
-

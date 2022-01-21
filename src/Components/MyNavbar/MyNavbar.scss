@@ -1,7 +1,27 @@
+@import "src/custom.scss";
+
 .nav-brand{
     margin-left: 50px;
     font-size: xx-large;
 }
+
+.nav-collapse-btn{
+    border: 0;
+    margin-right: 20px;
+}
+
+@media (min-width: $small) and (max-width: #{$medium - 1px}){
+    .nav-brand{
+        justify-content: center;
+    }
+}
+
+@media (max-width: $small){
+    .nav-brand{
+        margin-left: 30px;
+    }
+}
+
 
 
 
