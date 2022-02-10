@@ -2,3 +2,37 @@
 $small: 576px;
 $medium: 992px;
 $large: 1440px;
+
+// ----- Headings start here -----
+.heading-1{
+    width: 100%;
+}
+
+.heading-1 h1{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: headingfont2;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.para-1{
+    width: 100%;
+    
+}
+
+.para-1 p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    text-align: center;
+}
+
+@media (min-width: $medium) and (max-width: #{$large - 1px}){
+
+}
+
+// ----- Headings start here -----

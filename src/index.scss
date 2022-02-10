@@ -9,6 +9,19 @@
   font-family: headfont;
 }
 
+@font-face{
+  src: url(fonts/fjalla-one/FjallaOne-Regular.ttf);
+  font-family: headingfont;
+}
+
+@font-face{
+  src: url(fonts/aileron_0102/Aileron-Light.otf);
+  font-family: headingfont2;
+}
+
+
+
+
 :root{
   --primary: #960200;
   --info: #91D1CB;
