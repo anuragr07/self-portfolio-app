@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: $small){
+@media (max-width: #{$small - 1}){
     .nav-brand{
         margin-left: 30px;
     }
