@@ -3,6 +3,8 @@ import { Container, Row } from "react-bootstrap";
 import Skill from "./Skill/Skill";
 import "./Skills.scss"
 
+// TODO: Get the skills array here and pass it as props or process it as props and make skills display
+
 export default function Skills(){
     return(
         <>
