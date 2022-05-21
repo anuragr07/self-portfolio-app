@@ -1,21 +1,34 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import HeadingMain from "../../Heading/HeadingMain/HeadingMain";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import "./Projects.scss"
 
 export default function Projects(){
+
+    const listOfProjects = ["Diversity", "Portfolio", "travel"];
+
+    function getProjectCards(){
+        const projectCards = listOfProjects.map((project) => <ProjectCard name={project}></ProjectCard>)
+        return projectCards;
+    }
+
     return(
         <Container>
-            <div className="heading-1">
-                <h1>Projects</h1>
-            </div>
+            {/* Heading */}
+            <HeadingMain name='Projects'></HeadingMain>
 
             {/* - Make the spacing right for the cards*/}
             {/* - Confirm it is responsive - DONE*/}
             {/* - If not, thm make it responsive - DONE */}
+
+            {/* Contect */}
             <Row>
-                <ProjectCard className="col-spacing"></ProjectCard>
-                <ProjectCard></ProjectCard>
+
+                {getProjectCards()}
+
+                {/* <ProjectCard className="col-spacing"></ProjectCard> */}
+                {/* <ProjectCard></ProjectCard> */}
             </Row>
         </Container>
     )

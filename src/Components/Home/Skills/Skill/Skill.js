@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col } from "react-bootstrap";
 import "./Skill.scss";
 
-export default function Skill(){
+export default function Skill(props){
+
+    const[skillWidth, setSkillWidth] = useState("auto");
+
+    function skillFocus(){
+        setSkillWidth("8");
+    }
+
+    function skillUnfocus(){
+        setSkillWidth("auto");
+    }
+
     return(
         <>
-        {/* TODO: Need to add backend to make it full sstack application */}
-            <Col md="auto" className="skill-style">HTML</Col>
-            <Col md="auto" className="skill-style">CSS</Col>
-            <Col md="auto" className="skill-style">Node JS</Col>
-            <Col md="auto" className="skill-style">React JS</Col>
-            <Col md="auto" className="skill-style">Spring Boot</Col>
+            <Col md={skillWidth} className="skill-style" key={props.key} onClick={skillFocus} onBlur={skillUnfocus}>{props.name}</Col>
         </>
     );
 }

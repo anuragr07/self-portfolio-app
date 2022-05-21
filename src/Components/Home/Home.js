@@ -15,17 +15,14 @@ export default function Home(){
                     <div className="banner-text">
                         <h2>Hi, I am</h2>
                         <h1>Anurag Rawal</h1>
+                        <About></About>
                     </div>
                 </div>
             </Jumbotron>
             {/* Banner ends here */}
 
-            
-            <About></About>
             <Projects></Projects>
             <Skills></Skills>
-
-
         </div>
     )
 }
