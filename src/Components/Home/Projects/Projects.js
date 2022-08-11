@@ -9,7 +9,7 @@ export default function Projects(){
     const listOfProjects = ["Diversity", "Portfolio", "travel"];
 
     function getProjectCards(){
-        const projectCards = listOfProjects.map((project) => <ProjectCard name={project}></ProjectCard>)
+        const projectCards = listOfProjects.map((project, key) => <ProjectCard name={project} key={key}></ProjectCard>)
         return projectCards;
     }
 

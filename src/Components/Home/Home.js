@@ -3,7 +3,7 @@ import "./Home.scss";
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import About from "./About/About";
 import Projects from "./Projects/Projects";
-import Skills from "./Skills/Skills";
+import SkillTabs from "./SkillTabs/SkillTabs";
 
 export default function Home(){
     return(
@@ -22,7 +22,8 @@ export default function Home(){
             {/* Banner ends here */}
 
             <Projects></Projects>
-            <Skills></Skills>
+            {/* <Skills></Skills> */}
+            <SkillTabs></SkillTabs>
         </div>
     )
 }
