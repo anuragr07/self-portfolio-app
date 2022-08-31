@@ -19,7 +19,7 @@ export default function Home() {
         const links = pageLinks.map((link, key) => {
             if (link.linkVal === "home") {
                 return (
-                    <NavLink exact activeClassName="nav-link active" className="nav-link" to="/" key={key}><h5>{link.linkName}</h5></NavLink>
+                    <NavLink exact activeClassName="nav-link active" className="nav-link my-nav-link" to="/" key={key}><h5>{link.linkName}</h5></NavLink>
                 )
             }
             else {
@@ -33,16 +33,16 @@ export default function Home() {
 
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-0 nav-main">
-            <Navbar.Brand style={{ marginRight: "0px", paddingRight: "5px"}}>
+            <Navbar.Brand>
             <Nav className="d-flex alig-items-center justify-content-center">
             <NavLink exact className="nav-link active nav-brand" to="/">
                 <Logo></Logo>
             </NavLink>
             </Nav>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle className="nav-collapse-btn" aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="justify-content-end" style={{ width: "100%", paddingRight: "100px"}}>
+                <Nav className="justify-content-center" style={{width: "100%", paddingLeft: "100px"}}>
 
                     {getLinks()}
                     {/* {getLoginLogoutLink()} */}
