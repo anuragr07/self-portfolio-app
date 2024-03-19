@@ -6,9 +6,60 @@ import HeadingMain from "../../Heading/HeadingMain/HeadingMain";
 
 export default function SkillsGraph(){
 
+    // TODO: Create dummy data and use it to display charts
+    // TODO: Experiment multiple different type of charts
+    
+    // TODO: Create and get the data from Mongo
+    
+    const categories = [
+        {
+            category: 'Web Designing',
+            skills: ['HTML5', 'CSS3', 'Bootstrap5', 'JS', 'React Bootstrap']
+        },
+        {
+            category: 'Front-end Development',
+            skills: ['ReactJS', 'Redux'],
+        },
+        {
+            category: 'Back-end Development',
+            skills: ['NodeJS', 'ExpressJS', 'Spring Boot', 'Java', 'Servlets', 'PHP']
+        },
+        {
+            category: 'Databases',
+            skills: ['MySQL', 'MongoDB', 'PostgreSQL']
+        },
+        {
+            category: 'Mobile App Development',
+            skills: ['Android Development', 'UI/UX Designing', 'IOS Development']
+        }
+    ];
+
+    const categoriesSeries = [
+        {
+            category: 'Web Designing',
+            skills: ['10', '9.5', '9', '9.5', '8.5']
+        },
+        {
+            category: 'Front-end Development',
+            skills: ['8.5', '7'],
+        },
+        {
+            category: 'Back-end Development',
+            skills: ['9', '8.5', '8', '9.5', '8.5', '7']
+        },
+        {
+            category: 'Databases',
+            skills: ['8.5', '8', '7']
+        },
+        {
+            category: 'Mobile App Development',
+            skills: ['7.5', '0', '0']
+        }
+    ];
+    
     const skills = ['HTML5/CSS3/JS', 'Java11', 'PHP', 'MySql', 'MongoDB', 'ReactJS', 'ExpressJS'];
     const series = {
-        name: 'Skill Level', 
+        name: 'HTML', 
         data: [ 10, 9.5, 7, 9.5, 8, 8.5, 8]
     };
 

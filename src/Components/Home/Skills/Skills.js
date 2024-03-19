@@ -35,6 +35,9 @@ export default function Skills(){
                         {getSkills()}
                     </Row>
                 </Container>
+                <Row>
+                    
+                </Row>
             </div>
         </>
     )
