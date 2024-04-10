@@ -5,6 +5,8 @@ import About from "./About/About";
 import Projects from "./Projects/Projects";
 import SkillTabs from "./SkillTabs/SkillTabs";
 import { Col, Container, Row } from "react-bootstrap";
+import Experience from "./Experience/Experience";
+import ContactMe from "./ContactMe/ContactMe";
 
 export default function Home(){
     return(
@@ -42,6 +44,8 @@ export default function Home(){
             <Projects></Projects>
             {/* <Skills></Skills> */}
             <SkillTabs></SkillTabs>
+            <Experience></Experience>
+            <ContactMe></ContactMe>
         </div>
     )
 }
