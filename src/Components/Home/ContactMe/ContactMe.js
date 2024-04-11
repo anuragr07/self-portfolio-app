@@ -6,6 +6,7 @@ import "./ContactMe.scss";
 
 export default function ContactMe() {
 
+    // State of form data defined
     const [formData, setFormData] = useState({
         fname: "",
         lname: "",
@@ -13,6 +14,7 @@ export default function ContactMe() {
         message: ""
     })
 
+    // Handles the change in the form
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -21,8 +23,10 @@ export default function ContactMe() {
         })
     }
 
+    // Handles submit button
     const handleSubmit = (e) => {
         e.preventDefault();
+        // Add whatever you want to do with the code
         console.log(formData);
     }
 
@@ -32,7 +36,8 @@ export default function ContactMe() {
             <Row>
                 <Col>
                     <HeadingLevel3 name="Contact form"></HeadingLevel3>
-                    
+
+                    {/* --------------- CONTACT FORM START HERE ----------------- */}
                     <Form onSubmit={handleSubmit} className="contact-form">
                         <Row>
                             <Col>
@@ -84,6 +89,7 @@ export default function ContactMe() {
                             Submit
                         </Button>
                     </Form>
+                    {/* --------------- CONTACT FORM ENDS HERE ----------------- */}
 
                 </Col>
                 <Col>
