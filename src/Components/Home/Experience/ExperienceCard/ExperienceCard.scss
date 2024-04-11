@@ -1,0 +1,44 @@
+@import "src/custom.scss";
+@import "src/index.scss";
+
+.experience-card {
+    background-color: var(--light);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    /* Move the card up on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    /* Add shadow on hover */
+}
+
+.experience-info {
+    padding: 20px;
+}
+
+.experience-info h5,
+.experience-info h6 {
+    color: var(--dark);
+}
+
+.responsibilities {
+    padding-left: 20px;
+}
+
+.responsibilities ul {
+    list-style-type: disc;
+    font-size: 16px;
+    color: var(--dark);
+}
+
+.responsibilities li {
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+.responsibilities li:hover {
+    color: var(--primary);
+    /* Change text color on hover */
+}

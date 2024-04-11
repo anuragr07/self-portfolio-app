@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Custom fonts, colors, and variables */
+@font-face{
+  src: url(fonts/mariogalo/mariogalo.ttf);
+  font-family: logofont;  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face{
+  src: url(fonts/ractor/RACTOR.ttf);
+  font-family: headfont;
 }
+
+@font-face{
+  src: url(fonts/aileron_0102/Aileron-Light.otf);
+  font-family: headingfont;
+}
+
+
+
+
+:root{
+  --primary: #960200;
+  --info: #91D1CB;
+  --light: #FCFAF9;
+  --secondary: #D52941;
+  --dark: #1C1C1C;
+}
+
+$theme-colors: (
+  "primary": #960200,
+  "secondary": #D52941,
+  "light": #FCFAF9,
+  "info": #91D1CB,
+  "dark": #1C1C1C,
+  "transparent": rgba(0, 0, 0, 0)
+);
+
+
+
+// Import all bootstrap variables
+@import "~bootstrap/scss/bootstrap.scss";
+
+
+
+
+

@@ -1,0 +1,7 @@
+@import "src/Custom.scss";
+
+@media (max-width: #{$large - 1}){
+    .col-spacing{
+        margin-bottom: 30px;
+    }
+}

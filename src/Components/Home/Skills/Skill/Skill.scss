@@ -1,0 +1,16 @@
+.skill-style{
+    border: 0px black solid;
+    border-radius: 50px;
+    font-size: x-large;
+    background-color: var(--dark);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    margin: 10px;
+    margin-top: 0px;
+}
+
+.skill-style:hover{
+    color: var(--info);
+    cursor: pointer;
+}
