@@ -1,21 +1,63 @@
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 import './SkillsGraph.scss';
-import { Col, Row } from "react-bootstrap";
-import HeadingMain from "../../Heading/HeadingMain/HeadingMain";
+import { Col, ListGroup, Row } from "react-bootstrap";
+import HeadingLevel3 from "../../Heading/HeadingLevel3/HeadingLevel3";
+import { useState } from "react";
 
 export default function SkillsGraph(){
 
-    const skills = ['HTML5/CSS3/JS', 'Java11', 'PHP', 'MySql', 'MongoDB', 'ReactJS', 'ExpressJS'];
-    const series = {
-        name: 'Skill Level', 
-        data: [ 10, 9.5, 7, 9.5, 8, 8.5, 8]
-    };
+    const [skills, setSkills] = useState([]);
+    const [data, setData] = useState([]); // Initialize with empty array
+    const [category, setCategory] = useState('Web Designing'); // Initialize with a default category
 
-    const seriesWithColor = generateSeriesDataWithColor(series);
+    const categories = [
+        {
+            category: 'Web Designing',
+            skills: ['HTML5', 'CSS3', 'Bootstrap5', 'JS', 'React Bootstrap']
+        },
+        {
+            category: 'Front-end Development',
+            skills: ['ReactJS', 'Redux'],
+        },
+        {
+            category: 'Back-end Development',
+            skills: ['NodeJS', 'ExpressJS', 'Spring Boot', 'Java', 'Servlets', 'PHP']
+        },
+        {
+            category: 'Databases',
+            skills: ['MySQL', 'MongoDB', 'PostgreSQL']
+        },
+        {
+            category: 'Mobile App Development',
+            skills: ['Android Development', 'UI/UX Designing', 'IOS Development']
+        }
+    ];
 
-    // Randomly generate colors 
-    function generateRandomColor(){
+    const categoriesSeries = [
+        {
+            name: 'Web Designing',
+            data: [10, 9.5, 9, 9.5, 8.5]
+        },
+        {
+            name: 'Front-end Development',
+            data: [8.5, 7],
+        },
+        {
+            name: 'Back-end Development',
+            data: [9, 8.5, 8, 9.5, 8.5, 7]
+        },
+        {
+            name: 'Databases',
+            data: [8.5, 8, 7]
+        },
+        {
+            name: 'Mobile App Development',
+            data: [7.5, 0, 0]
+        }
+    ];
+
+    const generateRandomColor = () => {
         let maxVal = 0xFFFFFF; // 16777215
         let randomNumber = Math.random() * maxVal; 
         randomNumber = Math.floor(randomNumber);
@@ -24,12 +66,8 @@ export default function SkillsGraph(){
         return `#${randColor.toUpperCase()}`
     }
 
-    // Generate the data with random color
-    function generateSeriesDataWithColor(seriesData){ 
-
-        const data = seriesData.data;
-
-        const dataArray = data.map((item) => {
+    const generateSeriesDataWithColor = (seriesData) => {
+        const dataArray = seriesData.map((item) => {
             let color = generateRandomColor();
             while(color === "#FFFFFF"){
                 color = generateRandomColor();
@@ -43,17 +81,26 @@ export default function SkillsGraph(){
             return dataObj;
         })
 
-
         let seriesWithColor = {
             name: 'Skill Level',
             data: dataArray
         }
-    
-        // setSeries(seriesWithColor);
+
         return seriesWithColor;
     }
 
-    // Options for the graph
+    const changeGraph = (category) => {
+        const newData = categoriesSeries.find(item => item.name === category)?.data || [];
+        setData(newData);
+
+        const newSkills = categories.find(item => item.category === category)?.skills || [];
+        setSkills(newSkills);
+
+        setCategory(category);
+    }
+
+    let seriesWithColor = generateSeriesDataWithColor(categoriesSeries.find(item => item.name === category)?.data || []);
+
     let options = {
         chart: {
             type: 'bar',
@@ -113,7 +160,12 @@ export default function SkillsGraph(){
     return (
         <Row>
             <Col md={3}>
-                <HeadingMain name="This is Legend"></HeadingMain>
+                <HeadingLevel3 name="Categories"></HeadingLevel3>
+                <ListGroup defaultActiveKey="#link1">
+                    {categories.map((cat, index) => (
+                        <ListGroup.Item key={index} action onClick={() => changeGraph(cat.category)}>{cat.category}</ListGroup.Item>
+                    ))}
+                </ListGroup>
             </Col>
             <Col md={9}>
                 <HighchartsReact highcharts={Highcharts} options={options} className="chart"></HighchartsReact>

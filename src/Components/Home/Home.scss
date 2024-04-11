@@ -23,7 +23,16 @@
     background-color: var(--dark);
 }
 
+.rounded-profile{
+    display: none;
+}
+
 @media (min-width: $small) and (max-width: #{$medium - 1px}){
+
+    .rounded-profile{
+        display: block;
+    }
+
     .banner-img{
        display: none;
     }
@@ -46,6 +55,12 @@
 }
 
 @media (max-width: #{$small - 1px}) {
+
+    .rounded-profile{
+        display: block;
+        text-align: center;
+    }
+
     .banner-img{
         display: none;
     }
@@ -53,6 +68,7 @@
     .banner-img-rounded{
         width: 300px;
         height: 300px;
+        margin: auto;
         background-image: url("./profile-rounded.jpg");
         background-position: center;
         background-repeat: no-repeat;
