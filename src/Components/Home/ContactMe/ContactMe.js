@@ -27,6 +27,7 @@ export default function ContactMe() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Add whatever you want to do with the code
+
         console.log(formData);
     }
 
@@ -34,13 +35,12 @@ export default function ContactMe() {
         <Container>
             <HeadingMain name="Contact Me"></HeadingMain>
             <Row>
-                <Col>
-                    <HeadingLevel3 name="Contact form"></HeadingLevel3>
-
+                <Col md={5} className='contact-form-col'>
                     {/* --------------- CONTACT FORM START HERE ----------------- */}
                     <Form onSubmit={handleSubmit} className="contact-form">
+                    <HeadingLevel3 name="Contact form"></HeadingLevel3>
                         <Row>
-                            <Col>
+                            <Col lg={6}>
                                 <Form.Group controlId="formFirstName">
                                     <Form.Control
                                         type="text"
@@ -51,7 +51,7 @@ export default function ContactMe() {
                                     />
                                 </Form.Group>
                             </Col>
-                            <Col>
+                            <Col lg={6}>
                                 <Form.Group controlId="formLastName">
                                     <Form.Control
                                         type="text"
@@ -92,8 +92,13 @@ export default function ContactMe() {
                     {/* --------------- CONTACT FORM ENDS HERE ----------------- */}
 
                 </Col>
-                <Col>
+                <Col md={7} className='reach-me-at'>
                     <HeadingLevel3 name="Reach me at"></HeadingLevel3>
+                    <Row>
+                        <Col md={4} className='social-media-links'></Col>
+                        <Col md={4} className='personal-info'></Col>
+                        <Col md={4} className='resume-download'></Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>

@@ -1,8 +1,12 @@
 @import "src/custom.scss";
 
 .contact-form{
-    text-align: center
-    ;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-form-col{
+    background-color: var(--light);
 }
 
 .form-group {
@@ -11,7 +15,7 @@
 
 .form-control {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     border-radius: 0px;
     border: 0;
     border-bottom: 1px solid #ccc;
@@ -33,9 +37,15 @@
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    width: 50%;
+    width: 100%;
 }
 
 .submit-button:hover {
     background-color: var(--primary);
+}
+
+.reach-me-at {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 20px;
 }
