@@ -45,7 +45,7 @@ export default function Home(){
             {/* <Skills></Skills> */}
             <SkillTabs></SkillTabs>
             <Experience></Experience>
-            <ContactMe></ContactMe>
+            <ContactMe>c</ContactMe>
         </div>
     )
 }
