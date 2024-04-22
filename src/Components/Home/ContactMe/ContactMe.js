@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import HeadingLevel3 from '../../Heading/HeadingLevel3/HeadingLevel3';
-import HeadingMain from '../../Heading/HeadingMain/HeadingMain';
+import React, { useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import HeadingLevel3 from "../../Heading/HeadingLevel3/HeadingLevel3";
+import HeadingMain from "../../Heading/HeadingMain/HeadingMain";
+
 import "./ContactMe.scss";
+import ReachMe from "./ReachMe/ReachMe";
 
 export default function ContactMe() {
-
     // State of form data defined
     const [formData, setFormData] = useState({
         fname: "",
         lname: "",
         email: "",
-        message: ""
-    })
+        message: "",
+    });
 
     // Handles the change in the form
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
-            [name]: value
-        })
-    }
+            [name]: value,
+        });
+    };
 
     // Handles submit button
     const handleSubmit = (e) => {
@@ -29,16 +30,16 @@ export default function ContactMe() {
         // Add whatever you want to do with the code
 
         console.log(formData);
-    }
+    };
 
     return (
         <Container>
             <HeadingMain name="Contact Me"></HeadingMain>
             <Row>
-                <Col md={5} className='contact-form-col'>
+                <Col md={5} className="contact-form-col">
                     {/* --------------- CONTACT FORM START HERE ----------------- */}
                     <Form onSubmit={handleSubmit} className="contact-form">
-                    <HeadingLevel3 name="Contact form"></HeadingLevel3>
+                        <HeadingLevel3 name="Contact form"></HeadingLevel3>
                         <Row>
                             <Col lg={6}>
                                 <Form.Group controlId="formFirstName">
@@ -90,17 +91,12 @@ export default function ContactMe() {
                         </Button>
                     </Form>
                     {/* --------------- CONTACT FORM ENDS HERE ----------------- */}
-
                 </Col>
-                <Col md={7} className='reach-me-at'>
+                <Col md={7} className="reach-me-at">
                     <HeadingLevel3 name="Reach me at"></HeadingLevel3>
-                    <Row>
-                        <Col md={4} className='social-media-links'></Col>
-                        <Col md={4} className='personal-info'></Col>
-                        <Col md={4} className='resume-download'></Col>
-                    </Row>
+                    <ReachMe></ReachMe>
                 </Col>
             </Row>
         </Container>
-    )
+    );
 }

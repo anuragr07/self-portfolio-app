@@ -49,3 +49,13 @@
     color: var(--light);
     padding: 20px;
 }
+
+.reach-me-at-item {
+    font-size: x-large;
+    list-style: none;
+    color: var(--info);
+}
+
+.reach-me-at-item:hover{
+    color: var(--light);
+}

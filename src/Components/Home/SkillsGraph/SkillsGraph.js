@@ -8,7 +8,6 @@ import { useState } from "react";
 export default function SkillsGraph(){
 
     const [skills, setSkills] = useState([]);
-    const [data, setData] = useState([]); // Initialize with empty array
     const [category, setCategory] = useState('Web Designing'); // Initialize with a default category
 
     const categories = [
@@ -90,8 +89,8 @@ export default function SkillsGraph(){
     }
 
     const changeGraph = (category) => {
-        const newData = categoriesSeries.find(item => item.name === category)?.data || [];
-        setData(newData);
+        // const newData = categoriesSeries.find(item => item.name === category)?.data || [];
+        // setData(newData);
 
         const newSkills = categories.find(item => item.category === category)?.skills || [];
         setSkills(newSkills);
