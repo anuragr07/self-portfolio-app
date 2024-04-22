@@ -37,7 +37,7 @@ export default function ReachMeLinks() {
 
     // generate links to use below
     const links = linkArray.map((linkItem) => {
-        return <Nav.Link href={linkItem.link} className="reach-me-at-item">
+        return <Nav.Link href={linkItem.link} target="_blank" className="reach-me-at-item">
             {linkItem.iconTag}
             {" "}
             {linkItem.linkName}
