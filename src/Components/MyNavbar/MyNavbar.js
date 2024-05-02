@@ -10,10 +10,10 @@ export default function Home() {
 
     const pageLinks = [
         { linkName: "Home", linkVal: "home" },
-        { linkName: "My Experience", linkVal: "experience"},
+        { linkName: "Projects", linkVal: "projects"},
         { linkName: "Skills", linkVal: "skills"},
-        { linkName: "Contact Me", linkVal: "contact-me"},
-        { linkName: "Projecys", linkVal: "projects"}
+        { linkName: "Experience", linkVal: "experience"},
+        { linkName: "Contact Me", linkVal: "contact-me"}
     ]
 
     function getLinks(){
@@ -39,7 +39,7 @@ export default function Home() {
     }
 
     return(
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-0 nav-main">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-0" sticky="top">
             <Navbar.Brand>
             <Nav className="d-flex alig-items-center justify-content-center">
             <NavLink exact className="nav-link active nav-brand" to="/">
