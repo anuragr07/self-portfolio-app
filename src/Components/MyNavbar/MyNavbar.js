@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import "./MyNavbar.scss"
@@ -9,10 +10,10 @@ export default function Home() {
 
     const pageLinks = [
         { linkName: "Home", linkVal: "home" },
-        { linkName: "My Work", linkVal: "work"},
+        { linkName: "My Experience", linkVal: "experience"},
         { linkName: "Skills", linkVal: "skills"},
-        { linkName: "Contact Me", linkVal: "contact"},
-        { linkName: "My Resume", linkVal: "resume"}
+        { linkName: "Contact Me", linkVal: "contact-me"},
+        { linkName: "Projecys", linkVal: "projects"}
     ]
 
     function getLinks(){
@@ -24,9 +25,15 @@ export default function Home() {
             }
             else {
                 return (
-                    <NavLink exact activeClassName="nav-link active" className="nav-link" to={"/" + link.linkVal} key={key}><h5>{link.linkName}</h5></NavLink>
+                    <HashLink exact activeClassName="nav-link active" className="nav-link" to={"#" + link.linkVal} key={key}><h5>{link.linkName}</h5></HashLink>
                 )
             }
+
+            // else {
+            //     return (
+            //         <NavLink exact activeClassName="nav-link active" className="nav-link" to={"/" + link.linkVal} key={key}><h5>{link.linkName}</h5></NavLink>
+            //     )
+            // }
         });
         return links;
     }

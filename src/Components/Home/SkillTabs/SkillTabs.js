@@ -29,7 +29,7 @@ export default function SkillTabs(){
 
 
     return (
-      <>
+      <div id="skills">
       <Container>
         <Navbar>
           <Container className="tabs-nav">
@@ -48,6 +48,6 @@ export default function SkillTabs(){
       <Container>
         {getTab()}
       </Container>
-      </>
+      </div>
     );
 }

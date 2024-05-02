@@ -14,7 +14,7 @@ export default function Projects(){
     }
 
     return(
-        <Container>
+        <Container id="projects">
             {/* Heading */}
             <HeadingMain name='Projects'></HeadingMain>
 
