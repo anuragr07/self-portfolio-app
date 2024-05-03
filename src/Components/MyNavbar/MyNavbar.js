@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import "./MyNavbar.scss"
@@ -9,10 +10,10 @@ export default function Home() {
 
     const pageLinks = [
         { linkName: "Home", linkVal: "home" },
-        { linkName: "My Work", linkVal: "work"},
+        { linkName: "Projects", linkVal: "projects"},
         { linkName: "Skills", linkVal: "skills"},
-        { linkName: "Contact Me", linkVal: "contact"},
-        { linkName: "My Resume", linkVal: "resume"}
+        { linkName: "Experience", linkVal: "experience"},
+        { linkName: "Contact Me", linkVal: "contact-me"}
     ]
 
     function getLinks(){
@@ -24,15 +25,21 @@ export default function Home() {
             }
             else {
                 return (
-                    <NavLink exact activeClassName="nav-link active" className="nav-link" to={"/" + link.linkVal} key={key}><h5>{link.linkName}</h5></NavLink>
+                    <HashLink exact activeClassName="nav-link active" className="nav-link" to={"#" + link.linkVal} key={key}><h5>{link.linkName}</h5></HashLink>
                 )
             }
+
+            // else {
+            //     return (
+            //         <NavLink exact activeClassName="nav-link active" className="nav-link" to={"/" + link.linkVal} key={key}><h5>{link.linkName}</h5></NavLink>
+            //     )
+            // }
         });
         return links;
     }
 
     return(
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-0 nav-main">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-0" sticky="top">
             <Navbar.Brand>
             <Nav className="d-flex alig-items-center justify-content-center">
             <NavLink exact className="nav-link active nav-brand" to="/">

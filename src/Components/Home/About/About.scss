@@ -1,0 +1,18 @@
+.about-download-button{
+    border: 2px solid var(--light);
+    background-color: rgba($color: #1C1C1C, $alpha: 0.25);
+    border-radius: 0;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: x-large;
+    text-decoration: none;
+    color: var(--light);
+}
+
+.about-download-button:hover{
+    border: 2px solid var(--light);
+    color: var(--light);
+    background-color: var(--dark);
+    text-decoration: none;
+}
