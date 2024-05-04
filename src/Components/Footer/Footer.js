@@ -5,47 +5,49 @@ import './Footer.scss';
 // Fontawesome imports
 import Logo from '../Logo/Logo';
 
+
+
 export default function Footer(){
+
+    // Navigation Links
+    const pageLinks = [
+        { linkName: "Home", linkVal: "home" },
+        { linkName: "Projects", linkVal: "projects"},
+        { linkName: "Skills", linkVal: "skills"},
+        { linkName: "Experience", linkVal: "experience"},
+        { linkName: "Contact Me", linkVal: "contact-me"}
+    ]
+
+    // Function to get all the links 
+    function getLinks(){
+        const links = pageLinks.map((link, key) => {
+            if (link.linkVal === "home") { return <li><a href="/" key={key}>{link.linkName}</a></li> }
+            else{ return <li><a href={"#" + link.linkVal} key={key}>{link.linkName}</a></li> }
+        });
+        return links;
+    }
+
     return(
         <div className="my-footer">
         <Container>
-            <Row xs={1} lg={4}>
+            <Row xs={1} lg={3}>
                 <Col className="d-flex align-items-center justify-content-center">
                     <h3>
-                        <Logo ></Logo>
+                        <Logo></Logo>
                     </h3>
                 </Col>
                 <Col>
                     <div className='footer-links'>
                     <h5>Menu</h5>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="index.html">Web Designs</a></li>
-                            <li><a href="index.html">My work</a></li>
-                            <li><a href="index.html">My Resume</a></li>
-                            <li><a href="index.html">Contact</a></li>
+                            {getLinks()}
                         </ul>
                     </div>
                 </Col>
                 <Col>
                     <div className='footer-links'>
-                    <h5>My Work</h5>
-                        <ul>
-                            <li><a href="index.html">Website Designs</a></li>
-                            <li><a href="index.html">Ajax Forms</a></li>
-                            <li><a href="index.html">My Projects</a></li>
-                            <li><a href="index.html">Website Content</a></li>
-                        </ul>
-                    </div>
-                </Col>
-                <Col>
-                    <div className='footer-links'>
-                    <h5>Reach me at:</h5>
-                        <ul>
-                            <li><a href="index.html">Burnaby, BC V5A1C1</a></li>
-                            <li><a href="index.html">anuragr07@yahoo.com</a></li>
-                            <li><a href="index.html">+1 (778) 788-6322</a></li>
-                        </ul>
+                    <h5>Stay Connected</h5>
+                        
                     </div>
                 </Col>
             </Row>
