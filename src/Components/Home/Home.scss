@@ -1,5 +1,3 @@
-@import "src/custom.scss";
-
 .banner-img{
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba( 0, 0, 0, 0.6)), url("./profile.jpg");
@@ -27,7 +25,7 @@
     display: none;
 }
 
-@media (min-width: $small) and (max-width: #{$medium - 1px}){
+@media (min-width: var(--small)) and (max-width: #{var(--medium) - 1px}){
 
     .rounded-profile{
         display: block;
@@ -54,7 +52,7 @@
     }
 }
 
-@media (max-width: #{$small - 1px}) {
+@media (max-width: #{var(--small) - 1px}) {
 
     .rounded-profile{
         display: block;
