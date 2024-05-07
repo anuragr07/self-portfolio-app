@@ -66,7 +66,7 @@ export default function Footer() {
     }
 
     return (
-        <div className="my-footer">
+        <div className="my-footer mt-5">
             <Container>
                 <Row xs={1} lg={3}>
                     <Col className="d-flex align-items-center justify-content-center">
