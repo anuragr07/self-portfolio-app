@@ -37,5 +37,13 @@
     text-decoration: underline;
     color: var(--info);
 }
-// Start with HR above 'Anurag Rawal 2021'
-// Complete footer today
+.footer-email{
+    padding: 5px !important;
+}
+
+.footer-links-social-media li{
+    display: inline;
+    font-size: xx-large;
+    margin-right: 20px;
+    padding-left: 0;
+}
