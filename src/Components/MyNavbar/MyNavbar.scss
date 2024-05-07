@@ -8,13 +8,13 @@
     margin-right: 20px;
 }
 
-@media (min-width: var(--small)) and (max-width: #{var(--medium) - 1px}){
+@media (min-width: 576px) and (max-width: #{992px - 1px}){
     .nav-brand{
         justify-content: center;
     }
 }
 
-@media (max-width: #{var(--small) - 1}){
+@media (max-width: #{576px - 1}){
     .nav-brand{
         margin-left: 30px;
     }

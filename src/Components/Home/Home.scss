@@ -25,7 +25,7 @@
     display: none;
 }
 
-@media (min-width: var(--small)) and (max-width: #{var(--medium) - 1px}){
+@media (min-width: 576px) and (max-width: #{992px - 1px}){
 
     .rounded-profile{
         display: block;
@@ -52,7 +52,7 @@
     }
 }
 
-@media (max-width: #{var(--small) - 1px}) {
+@media (max-width: #{576px - 1px}) {
 
     .rounded-profile{
         display: block;
