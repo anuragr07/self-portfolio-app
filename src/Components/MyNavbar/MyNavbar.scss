@@ -1,5 +1,3 @@
-@import "src/custom.scss";
-
 .nav-brand{
     margin-left: 50px;
     font-size: xx-large;
@@ -10,13 +8,13 @@
     margin-right: 20px;
 }
 
-@media (min-width: $small) and (max-width: #{$medium - 1px}){
+@media (min-width: var(--small)) and (max-width: #{var(--medium) - 1px}){
     .nav-brand{
         justify-content: center;
     }
 }
 
-@media (max-width: #{$small - 1}){
+@media (max-width: #{var(--small) - 1}){
     .nav-brand{
         margin-left: 30px;
     }
