@@ -4,8 +4,6 @@ import Skill from "./Skill/Skill";
 import "./Skills.scss"
 // import SkillTabs from "./SkillTabs/SkillTabs";
 
-// TODO: Get the skills array here from DB and pass it as props or process it as props and make skills display
-
 export default function Skills() {
 
     const skills = ['HTML5', 'CSS3', 'Java11', 'JavaScript', 'Android Development', 'MERN Stack', 'ReactJS', 'ExpressJS', 'Spring Boot', 'MongoDB', 'MySQL'];

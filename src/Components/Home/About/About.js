@@ -13,9 +13,6 @@ export default function About(){
 
             {/* Content */}
             <div className="para-1">
-                
-                {/* TODO: Add Social media links here */}
-                {/* TODO: Add contact me links here - Email, Resume */}
                 <p>Experienced Software Engineer professional with 2+ years of proven experience in the industry working in different sectors as Service Based and Sales focussed companies, along with PG Diploma Graduate in Computer and Information Systems.</p>
                 <a href={pdf} download="Resume_Anurag_Rawal.pdf" className="about-download-button">My Resume</a>
             </div>
