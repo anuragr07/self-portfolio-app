@@ -6,8 +6,39 @@ import "./Skills.scss"
 
 export default function Skills() {
 
-    const skills = ['HTML5', 'CSS3', 'Java11', 'JavaScript', 'Android Development', 'MERN Stack', 'ReactJS', 'ExpressJS', 'Spring Boot', 'MongoDB', 'MySQL'];
-
+    const skills = [
+        "Java",
+        "C#",
+        "JavaScript",
+        "Git",
+        "Maven",
+        "Gradle",
+        "AWS",
+        "GCP",
+        "React",
+        "Redux",
+        "Android Native",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "ExpressJS",
+        "Java Servlets",
+        "SpringBoot",
+        "MySQL",
+        "MS SQL",
+        "MongoDB",
+        "SQL Lite",
+        "Firebase",
+        "VS Code",
+        "Android Studio",
+        "Xcode",
+        "IntelliJ",
+        "Postman",
+        "Windows",
+        "Mac",
+        "Linux"
+    ];
+    
     // To get the skill components in an array
     function getSkills() {
         const skillComponents = skills.map((skill, key) => {
