@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
+import HeadingMain from "../../Heading/HeadingMain/HeadingMain";
 
 // List all the experiences
 const experiences = [
@@ -43,26 +44,26 @@ const experiences = [
             "Coordinated with Front-end design teams to create the best possible UI elements that could elevate client-side experience and the overall functionality, and performance of the website.",
         ],
     },
-    {
-        position: "Software Engineer",
-        country: "India",
-        startDate: "Jul 2017",
-        endDate: "Jul 2019",
-        company: "Jagdish Travel Advisor",
-        technologies: ["Java8", "JavaFX", "Java Swing"],
-        responsibilities: [
-            "Collaborated across departments to integrate Windows applications into our systems, enhancing user experience and operational efficiency.",
-            "Designed and implemented Windows applications for production, ensuring prompt delivery and meeting company system requirements.",
-            "Actively participated in Agile development processes, including sprint planning, daily stand-ups, and retrospectives, to ensure timely delivery of features and continuous improvement of the development workflow.",
-        ],
-    },
+    // {
+    //     position: "Software Engineer",
+    //     country: "India",
+    //     startDate: "Jul 2017",
+    //     endDate: "Jul 2019",
+    //     company: "Jagdish Travel Advisor",
+    //     technologies: ["Java8", "JavaFX", "Java Swing"],
+    //     responsibilities: [
+    //         "Collaborated across departments to integrate Windows applications into our systems, enhancing user experience and operational efficiency.",
+    //         "Designed and implemented Windows applications for production, ensuring prompt delivery and meeting company system requirements.",
+    //         "Actively participated in Agile development processes, including sprint planning, daily stand-ups, and retrospectives, to ensure timely delivery of features and continuous improvement of the development workflow.",
+    //     ],
+    // },
 ];
 
 
 export default function Experience() {
     return (
         <Container id="experience">
-            <h2 className="mt-5 mb-4 text-center">Experience</h2>
+            <HeadingMain name="Experience"></HeadingMain>
             {experiences.map((exp, index) => (
                 <Row key={index} className="mb-4">
                     <ExperienceCard experience={exp} />

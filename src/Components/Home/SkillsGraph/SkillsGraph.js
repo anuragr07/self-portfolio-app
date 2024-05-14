@@ -8,53 +8,62 @@ import { useState } from "react";
 export default function SkillsGraph(){
 
     const [skills, setSkills] = useState([]);
-    const [category, setCategory] = useState('Web Designing'); // Initialize with a default category
+    const [category, setCategory] = useState('Core Skills'); // Initialize with a default category
 
     const categories = [
         {
-            category: 'Web Designing',
-            skills: ['HTML5', 'CSS3', 'Bootstrap5', 'JS', 'React Bootstrap']
+            category: "Core Skills",
+            skills: ["Java", "C#", "JavaScript", "Git", "Maven", "Gradle", "AWS", "GCP"]
         },
         {
-            category: 'Front-end Development',
-            skills: ['ReactJS', 'Redux'],
+            category: "Front-End",
+            skills: ["React", "Redux", "Android Native", "HTML", "CSS"]
         },
         {
-            category: 'Back-end Development',
-            skills: ['NodeJS', 'ExpressJS', 'Spring Boot', 'Java', 'Servlets', 'PHP']
+            category: "Back-End",
+            skills: ["Node.js", "ExpressJS", "Java Servlets", "SpringBoot"]
         },
         {
-            category: 'Databases',
-            skills: ['MySQL', 'MongoDB', 'PostgreSQL']
+            category: "Databases",
+            skills: ["MySQL", "MS SQL", "MongoDB", "SQL Lite", "Firebase"]
         },
         {
-            category: 'Mobile App Development',
-            skills: ['Android Development', 'UI/UX Designing', 'IOS Development']
+            category: "Tools",
+            skills: ["VS Code", "Android Studio", "Xcode", "IntelliJ", "Postman"]
+        },
+        {
+            category: "Operating Systems",
+            skills: ["Windows", "Mac", "Linux"]
         }
-    ];
+    ];    
 
     const categoriesSeries = [
         {
-            name: 'Web Designing',
-            data: [10, 9.5, 9, 9.5, 8.5]
+            name: "Core Skills",
+            data: [9.5, 8.5, 9.5, 9, 8.5, 8, 7.5, 7.5]
         },
         {
-            name: 'Front-end Development',
-            data: [8.5, 7],
+            name: "Front-End",
+            data: [9.5, 8, 8.5, 10, 9]
         },
         {
-            name: 'Back-end Development',
-            data: [9, 8.5, 8, 9.5, 8.5, 7]
+            name: "Back-End",
+            data: [9, 9, 8.5, 8]
         },
         {
-            name: 'Databases',
-            data: [8.5, 8, 7]
+            name: "Databases",
+            data: [9, 8.5, 9, 8.5, 7]
         },
         {
-            name: 'Mobile App Development',
-            data: [7.5, 0, 0]
+            name: "Tools",
+            data: [10, 8, 7, 8, 9]
+        },
+        {
+            name: "Operating Systems",
+            data: [10, 9.5, 9]
         }
     ];
+    
 
     const generateRandomColor = () => {
         let maxVal = 0xFFFFFF; // 16777215
