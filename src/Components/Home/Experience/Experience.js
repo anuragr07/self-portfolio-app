@@ -9,7 +9,7 @@ const experiences = [
         position: "IT Analyst",
         country: "Canada",
         startDate: "Jan 2023",
-        endDate: "Present",
+        endDate: "Oct 2024",
         company: "Compugen – FortisBC Contractor",
         technologies: ["AD", "SCCM", "PowerShell", "Azure", "MySQL", "VS Code"],
         responsibilities: [
